@@ -14,7 +14,7 @@ func main() {
     http.Handle("static/", http.StripPrefix("static/", fs))
 
 		// change to webska.net:80
-		err := http.ListenAndServe(":80", nil);
+		err := http.ListenAndServe("webska:80", nil);
 		if err != nil{
 			fmt.Println("Error starting the server: ",err);
 		}
